@@ -21,6 +21,10 @@ let buttonStart = document.getElementById("start"),
     month = document.querySelector(".month-value"),
     day = document.querySelector(".day-value");
 
+for (let i = 0; i < 3; i++) {
+    buttons[i].disabled = true
+}
+
 let money, time;
 
 buttonStart.addEventListener("click", () => {
@@ -35,6 +39,12 @@ buttonStart.addEventListener("click", () => {
     year.value = time.getFullYear()
     month.value = time.getMonth() + 1
     day.value = time.getDate()
+
+
+    for (let i = 0; i < 3; i++) {
+        buttons[i].disabled = false
+    }
+
 })
 
 firstButton.addEventListener('click', () => {
@@ -51,6 +61,8 @@ firstButton.addEventListener('click', () => {
         }
     }
     expensesValue.textContent = sum
+    appData.budget -= sum
+
 })
 
 secondButton.addEventListener('click', () => {
@@ -61,6 +73,7 @@ secondButton.addEventListener('click', () => {
         appData.optinalExpenses[i] = opt;
         optionalexpensesValue.textContent += appData.optinalExpenses[i] + " "
     }
+
 })
 
 thirdButton.addEventListener('click', () => {
