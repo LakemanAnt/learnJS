@@ -1,0 +1,5 @@
+1 node.js -> npm
+2 Babel
+3 JSX
+4 Webpack
+5 React

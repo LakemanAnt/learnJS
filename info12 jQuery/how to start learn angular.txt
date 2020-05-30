@@ -1,0 +1,5 @@
+1 node.js -> npm
+2 TypeScript
+3 Webpack
+4 MVC (model view controler)
+5 Angular
